@@ -1,0 +1,195 @@
+/* Navbar container */
+.header {
+  background-color: #1d1d1f;
+  width: 100%;
+  min-height: 70px;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header.logo-wrap a {
+  padding-left: 30px;
+}
+
+.navbar {
+  max-width: 600px;
+  padding: 0 30px;
+}
+
+/* Navbar logo */
+.navbar img {
+  height: 40px;
+}
+
+/* Navbar links */
+.navbar a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 50px;
+  font-weight: 600;
+  position: relative;
+}
+
+.header .navbar .link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  right: 50%;
+  transition: all 0.3s ease-out;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header .navbar .link:hover:after {
+  left: 0px;
+  right: 0px;
+  transition: all 0.3s ease-out;
+}
+
+/* Navbar search form */
+.navbar form {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar search input */
+.navbar input[type="text"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* Navbar search button */
+.navbar button[type="submit"] {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header .hamburger-box {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.header .hamburger-box .hamburger {
+  width: 100%;
+  height: 2px;
+  top: 0px;
+  position: relative;
+  transition: all 0.3s ease-out;
+  background-color: #fff;
+}
+
+.header .hamburger-box .hamburger::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  right: 0px;
+  transition: all 0.3s ease-out;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header .hamburger-box .hamburger::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  transition: all 0.3s ease-out;
+  right: 0px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.theme-light .header .hamburger-box .hamburger::after {
+  background-color: #f16b36;
+}
+
+.theme-dark .header .hamburger-box .hamburger::after {
+  background-color: #26bad4;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .hamburger-box {
+    display: block;
+  }
+
+  .header .isActive.navbar {
+    left: 0px;
+    z-index: 9999;
+  }
+
+  .header .isActive.hamburger-box .hamburger {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .header .isActive.hamburger-box .hamburger::before {
+    opacity: 0;
+  }
+
+  .header .isActive.hamburger-box .hamburger::after {
+    transform: rotate(-90deg);
+    top: 1px;
+  }
+
+  .header .navbar {
+    position: fixed;
+    top: 0px;
+    left: -320px;
+    transition: all 0.5s ease-out;
+    right: 0px;
+    bottom: -200px;
+    z-index: -1;
+    width: 300px;
+    min-width: 300px;
+    margin: 0;
+    background-color: #222;
+    box-shadow: 0 5px 10px #000;
+  }
+
+  .header .list {
+    display: block;
+    padding-top: 60px
+  }
+
+  .header .navbar .link {
+    margin-left: 0px;
+    padding: 25px 10px;
+    display: block;
+  }
+
+  .header .navbar .nav-list {
+    display: block;
+    padding-top: 30px;
+    height: 100%;
+    z-index: 1000;
+    position: relative;
+  }
+
+  .header .navbar .nav-list .nav-item {
+    padding: 0;
+  }
+
+  .header .navbar .nav-list .nav-item .nav-link {
+    padding: 25px 35px;
+    display: block;
+  }
+
+  .header .navbar .nav-list .nav-item .nav-link::after {
+    height: 0;
+  }
+}

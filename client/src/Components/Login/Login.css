@@ -1,0 +1,39 @@
+.form-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form {
+  padding: 40px;
+  margin: 40px;
+  box-shadow: 0 0 10px #666;
+  background-color: #232323;
+}
+
+.form .form-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form .form-group {
+  padding: 15px;
+}
+
+.form label {
+  display: block;
+}
+
+.form .form-control {
+  border-bottom: 1px solid #555;
+  font-size: 16px;
+  background: transparent;
+  padding-left: 10px;
+  margin-left: 10px;
+  color: #efefef;
+}
+
+.form .form-control:focus {
+  outline: none;
+  border-color: #efefef;
+}

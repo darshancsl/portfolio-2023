@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  display: swap;
+  font-weight: 400;
+  src: url("../src/Assets/Fonts/open-sans/open-sans-regular.woff") format("woff"), url("../src/Assets/Fonts/open-sans/open-sans-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  display: swap;
+  font-weight: 600;
+  src: url("../src/Assets/Fonts/open-sans/open-sans-600.woff") format("woff"), url("../src/Assets/Fonts/open-sans/open-sans-600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/Assets/Fonts/open-sans/open-sans-700.woff") format("woff"), url("../src/Assets/Fonts/open-sans/open-sans-700.ttf") format("truetype");
+}
+
+body {
+  font-family: Open Sans, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #efefef;
+  background-color: #333;
+}
+
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #efefef;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+a {
+  color: #efefef;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-Btn {
+  background-color: #047c91;
+  padding: 12px 20px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.primary-Btn:hover {
+  background-color: #097184;
+}
+
+input::placeholder {
+  font-size: 12px;
+  font-family: Open Sans, Helvetica, sans-serif;
+}
+
+/* Fiexbox */
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .primary-Btn {
+    padding: 12px 15px;
+  }
+}

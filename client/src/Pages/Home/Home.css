@@ -1,0 +1,47 @@
+.home {
+  min-height: calc(100vh - 147px);
+  position: relative;
+}
+
+.home .content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.home .content .caption {
+  font-weight: 600;
+}
+
+.home .content .title {
+  margin-bottom: 20px;
+}
+
+.home .content .desc {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.home .bg-image {
+  position: absolute;
+  background: url('../../Assets/Images/banner-bg.jpg') 50% no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .2;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    min-height: calc(100vh - 160px);
+  }
+
+  .home .content .desc {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+}
